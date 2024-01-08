@@ -16,6 +16,11 @@
                 <!-- 첫 번째 폼: 소주제 표시 -->
                 <form method="post">
                     <input type="text" name="user_input" value="{{ user_input }}" placeholder="영상 주제를 입력하세요">
+                    <select name="modelSelect">
+                        <option value="" disabled selected>모델을 선택하시오</option>
+                        <option value="gpt">gpt</option>
+                        <option value="gemini">gemini</option>
+                    </select>
                     <button type="submit" name="button1">소주제 생성</button>
                 </form>
                 
@@ -45,7 +50,7 @@
                     {% for i in range(1, 11) %}
                         {% if checkbox_states.get('subtopic' ~ i, '') %}
                             <strong>{{ subtopics[i-1] }}</strong> <!-- 소주제 제목 표시 -->
-                            <textarea class="script-box" rows="4">{{ subtopics[i-1] }}와 관련된 스크립트</textarea>
+                            <textarea class="script-box" rows="4">{{ selected_scripts[i] }}</textarea>
                         {% endif %}
                     {% endfor %}
                 </div>
