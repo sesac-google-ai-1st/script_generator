@@ -5,7 +5,7 @@ function handleInput(event) {
     console.log("handleInput called"); // 디버깅을 위한 콘솔 로그
     var input = event.target;
     var sendButtonImage = document.querySelector('.prompt-send-button img');
-
+    
     if (input.value.trim() !== '') {
         sendButtonImage.src = 'images/arrow1.png';
     } else {
@@ -34,17 +34,17 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener('DOMContentLoaded', function() {
     let checkboxes = document.querySelectorAll('.subtopic-checkbox');
 
-    checkboxes.forEach(function(checkbox) {
-        checkbox.addEventListener('change', function() {
-            // 모든 체크박스의 선택을 해제
-            checkboxes.forEach(function(otherCheckbox) {
-                if (otherCheckbox !== checkbox) {
-                    otherCheckbox.checked = false;
-                }
-            });
+    // checkboxes.forEach(function(checkbox) {
+    //     checkbox.addEventListener('change', function() {
+    //         // 모든 체크박스의 선택을 해제
+    //         checkboxes.forEach(function(otherCheckbox) {
+    //             if (otherCheckbox !== checkbox) {
+    //                 otherCheckbox.checked = false;
+    //             }
+    //         });
             
-        });
-    });
+    //     });
+    // });
 });
 
 
