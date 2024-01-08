@@ -5,7 +5,7 @@ function handleInput(event) {
     console.log("handleInput called"); // 디버깅을 위한 콘솔 로그
     var input = event.target;
     var sendButtonImage = document.querySelector('.prompt-send-button img');
-    
+
     if (input.value.trim() !== '') {
         sendButtonImage.src = 'images/arrow1.png';
     } else {
@@ -13,39 +13,39 @@ function handleInput(event) {
     }
 }
 
-/* 소주제 */
-document.addEventListener('DOMContentLoaded', function() {
-    document.querySelectorAll('.subtopic-checkbox').forEach(function(checkbox) {
-        checkbox.addEventListener('change', function() {
-            console.log('체크박스 상태 변경됨: ' + this.checked);
-            // 여기에서 추가적인 로직을 구현할 수 있습니다.
-        });
-    });
+// /* 소주제 */
+// document.addEventListener('DOMContentLoaded', function() {
+//     document.querySelectorAll('.subtopic-checkbox').forEach(function(checkbox) {
+//         checkbox.addEventListener('change', function() {
+//             console.log('체크박스 상태 변경됨: ' + this.checked);
+//             // 여기에서 추가적인 로직을 구현할 수 있습니다.
+//         });
+//     });
 
-    document.querySelectorAll('.subtopic-refresh-button').forEach(function(button) {
-        button.addEventListener('click', function() {
-            alert('새로고침 기능이 실행됩니다.');
-            // 여기에서 새로고침 로직을 구현할 수 있습니다.
-        });
-    });
-});
+//     document.querySelectorAll('.subtopic-refresh-button').forEach(function(button) {
+//         button.addEventListener('click', function() {
+//             alert('새로고침 기능이 실행됩니다.');
+//             // 여기에서 새로고침 로직을 구현할 수 있습니다.
+//         });
+//     });
+// });
 
-/* 소주제 체크박스 클릭시  */
-document.addEventListener('DOMContentLoaded', function() {
-    let checkboxes = document.querySelectorAll('.subtopic-checkbox');
+// /* 소주제 체크박스 클릭시  */
+// document.addEventListener('DOMContentLoaded', function() {
+//     let checkboxes = document.querySelectorAll('.subtopic-checkbox');
 
-    // checkboxes.forEach(function(checkbox) {
-    //     checkbox.addEventListener('change', function() {
-    //         // 모든 체크박스의 선택을 해제
-    //         checkboxes.forEach(function(otherCheckbox) {
-    //             if (otherCheckbox !== checkbox) {
-    //                 otherCheckbox.checked = false;
-    //             }
-    //         });
+//     checkboxes.forEach(function(checkbox) {
+//         checkbox.addEventListener('change', function() {
+//             // 모든 체크박스의 선택을 해제
+//             checkboxes.forEach(function(otherCheckbox) {
+//                 if (otherCheckbox !== checkbox) {
+//                     otherCheckbox.checked = false;
+//                 }
+//             });
             
-    //     });
-    // });
-});
+//         });
+//     });
+// });
 
 
 
