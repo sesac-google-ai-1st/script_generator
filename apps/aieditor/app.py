@@ -51,7 +51,7 @@ def maintest():
             # ScriptAssistant 인스턴스가 생성되어 있을 경우에만 dd 호출
             if script_assistant_instance:
                 selected_idx = [
-                    i for i in range(10) if request.form.get(f"subtopic{i}")
+                    i for i in range(1, 11) if request.form.get(f"subtopic{i}")
                 ]
                 print(selected_idx)
                 selected_list = script_assistant_instance.select_subtopics(selected_idx)
@@ -62,7 +62,7 @@ def maintest():
                         user_input, selected_list, str(i + 1)
                     )
                     # selected_scripts.append(script)
-                    selected_scripts[idx] = script
+                    selected_scripts[idx - 1] = script
                 print(selected_scripts)
 
         # 체크박스 상태를 업데이트

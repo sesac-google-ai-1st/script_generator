@@ -50,7 +50,7 @@
                     {% for i in range(1, 11) %}
                         {% if checkbox_states.get('subtopic' ~ i, '') %}
                             <strong class="selected-subtopic">{{ subtopics[i-1] }}</strong> <!-- 소주제 제목 표시 -->
-                            <textarea class="script-box" rows="4">{{ selected_scripts[i] }}</textarea>
+                            <textarea class="script-box" rows="4">{{ selected_scripts[i-1] }}</textarea>
                         {% endif %}
                     {% endfor %}
                 </div>
