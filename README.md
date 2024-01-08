@@ -5,6 +5,8 @@ README 계속 수정 중..
 
 # 📽️ Demo
 
+![image](https://github.com/sesac-google-ai-1st/script_generator/assets/97524127/4e7249e6-9e6e-448e-aea8-e1f46c7cefe3)
+
 
 
 # 🧑‍💻 How to run
@@ -49,3 +51,29 @@ README 계속 수정 중..
 
 
 <br>
+
+# 1. 프로젝트 소개
+
+Youtube 영상 제작을 위한 AI 스크립트 생성기
+: AI 영상 제작 도우미 서비스의 mini project
+- 본업(유튜버), 마케팅(홍보), 부업(부수입) 다양한 목적으로 영상 제작에 대한 니즈가 있음 
+- 최근 다양한 생성형 AI 툴을 활용해서 예전 보다 훨씬 간단하게 영상을 제작할 수 있음
+  - → but 대부분의 서비스가 1분 미만의 숏츠 영상에 최적화 되어 있거나, 각각의 서비스별로 부족한 부분 존재
+
+## 목표
+
+![what we want1](https://github.com/sesac-google-ai-1st/script_generator/assets/97524127/b3472037-c162-40e7-92fb-4ebc0c98647a)
+
+![what we want2](https://github.com/sesac-google-ai-1st/script_generator/assets/97524127/40e7b69b-4a11-46e2-ae89-7dda8d16884e)
+
+![what we want3](https://github.com/sesac-google-ai-1st/script_generator/assets/97524127/dfc9830d-62d8-470b-abe2-69386fee56e7)
+
+
+
+# 2. 코드 설명
+
+## Flask
+
+## LangChain
+
+![LangChain](https://github.com/sesac-google-ai-1st/script_generator/assets/97524127/688f1b1d-5dae-4d9e-8603-ae505606406f)
