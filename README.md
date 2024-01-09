@@ -1,12 +1,11 @@
 # script_generator
-Youtube 영상 제작을 위한 AI 스크립트 생성기
 
-README 계속 수정 중..
+#### Youtube 영상 제작을 위한 AI 스크립트 생성기
+
 
 # 📽️ Demo
 
-![image](https://github.com/sesac-google-ai-1st/script_generator/assets/97524127/4e7249e6-9e6e-448e-aea8-e1f46c7cefe3)
-
+![script generator](https://github.com/sesac-google-ai-1st/script_generator/assets/97524127/3d0448cc-7b7f-4502-9d65-f42b49c32b9f)
 
 
 # 🧑‍💻 How to run
@@ -36,16 +35,18 @@ README 계속 수정 중..
   - [목표](#목표)
   - [수행 기간 및 팀원](#수행-기간-및-팀원)
   - [repo structure](#repo-structure)
-  - [Project Workflow]()
+  - [Project Workflow](#project-workflow)
   
-[2. 코드 설명](#2-코드-설명) <br>
-  - [Flask](#Flask)
-  - [LangChain](#LangChain)
+[2. 상세 task](#2-상세-task) <br>
+  - [LLM 모델 테스트](#llm-모델-테스트)
+  - [Frontend](#frontend)
+  - [Backend](#backend)
+  - [LangChain](#langchain)
 
 
-[4. 결과](#4-결과) <br>
+[3. 결과](#3-결과) <br>
 
-[5. 프로젝트 회고](#5-프로젝트-회고) <br>
+[4. 프로젝트 회고](#4-프로젝트-회고) <br>
   - [어려웠던 점](#어려웠던-점)
   - [배운 점](#배운-점)
 
@@ -54,13 +55,19 @@ README 계속 수정 중..
 
 # 1. 프로젝트 소개
 
-Youtube 영상 제작을 위한 AI 스크립트 생성기
-: AI 영상 제작 도우미 서비스의 mini project
-- 본업(유튜버), 마케팅(홍보), 부업(부수입) 다양한 목적으로 영상 제작에 대한 니즈가 있음 
-- 최근 다양한 생성형 AI 툴을 활용해서 예전 보다 훨씬 간단하게 영상을 제작할 수 있음
-  - → but 대부분의 서비스가 1분 미만의 숏츠 영상에 최적화 되어 있거나, 각각의 서비스별로 부족한 부분 존재
+### Youtube 영상 제작을 위한 AI 스크립트 생성기 
+#### : AI 영상 제작 도우미 서비스의 sub project
+- 본업(유튜버), 마케팅(홍보), 부업(부수입) 등 다양한 목적으로 영상 제작에 대한 니즈가 있음 
+- 최근 다양한 생성형 AI 툴을 활용해서 예전보다 훨씬 간단하게 영상을 제작할 수 있음 <br>
+ → but, 대부분의 서비스가 1분 미만의 숏츠 영상에 최적화 되어 있거나, 각각의 서비스별로 부족한 부분 존재
+- **스크립트 작성 단계에서의 Pain Point** 😠 (by 현 유튜버)
+   - 1번의 프롬프트로 원하는 분량의 스크립트 작성이 어려움
+   - 스크립트 분량 늘어날수록 내용의 짜임새가 부족
+   - 채팅 방식이라서 이전에 생성한 내용 찾을 때 불편함
 
 ## 목표
+
+#### 보다 간편하게 최종 영상 스크립트를 작성 할 수 있는 웹 서비스
 
 ![what we want1](https://github.com/sesac-google-ai-1st/script_generator/assets/97524127/b3472037-c162-40e7-92fb-4ebc0c98647a)
 
@@ -68,12 +75,80 @@ Youtube 영상 제작을 위한 AI 스크립트 생성기
 
 ![what we want3](https://github.com/sesac-google-ai-1st/script_generator/assets/97524127/dfc9830d-62d8-470b-abe2-69386fee56e7)
 
+## 수행 기간 및 팀원
 
+- 🗓️ 수행 기간 : 2023.12.29 ~ 2024.01.05 (5일)
 
-# 2. 코드 설명
+- 👥 팀원 (4명)<br>
 
-## Flask
+    |남경수|박영현|이철현|최지민|
+    |:-:|:-:|:-:|:-:|
+    |<img src='https://avatars.githubusercontent.com/u/147117427?v=4' height=80 width=80px></img>|<img src='https://avatars.githubusercontent.com/u/72022988?v=4' height=80 width=80px></img>|<img src='https://avatars.githubusercontent.com/u/126049851?v=4' height=80 width=80px></img>|<img src='https://avatars.githubusercontent.com/u/97524127?v=4' height=80 width=80px></img>|
+    |[Github](https://github.com/namchaos4809)|[Github](https://github.com/yhp2205)|[Github](https://github.com/collin421)|[Github](https://github.com/timmyeos)|
 
+## repo structure
+
+```
+.
+├── apps
+│   └── aieditor
+│       ├── app.py
+│       ├── func
+│       │   └── chain.py
+│       ├── static
+│       │   ├── css
+│       │   │   └── style.css
+│       │   ├── images
+│       │   │   ├── 1.jpg
+│       │   │   ├── 2.jfif
+│       │   │   ├── 3.jfif
+│       │   │   ├── 4.png
+│       │   │   ├── arrow1.png
+│       │   │   ├── arrow2.png
+│       │   │   └── prom.png
+│       │   └── js
+│       │       └── script.js
+│       └── templates
+│           └── maintest.html
+├── README.md
+└── requirements.txt
+```
+
+## Project Workflow
+
+메인 주제 입력 → 자동으로 서브 주제 생성 → 서브 주제 선택 → 최종 스크립트 생성 및 출력
+
+# 2. 상세 task
+
+## LLM 모델 테스트
+
+- 목표
+  - 원하는 내용/형태/충분한 분량이 생성 가능한 LLM 모델 선정
+  - LLM 모델에 맞는 최적 프롬프트 도출
+- 테스트 대상 모델
+  -  gemini pro
+  -  bard(palm2)
+  -  gpt-3.5-turbo-1106
+  -  gpt 4
+- 테스트 항목 
+  - 영어 / 한글 프롬프트 별로 충분한 답변을, 원하는 형태로 생성해주는가
+- 테스트 결과
+  - 모든 모델들은 **영어 프롬프트** 입력 시, 다수의 요청 사항을 반영하여 답변을 줌(원하는 형태로 답변)  👍
+  - 일부 모델 **한글로 프롬프트** 입력 시, 다수의 요청사항 반영 X 👎
+
+→ gpt-3.5-turbo-1106 이전 모델의 경우 다수의 요청 사항을 모두 반영해서 답변을 주지 못함(영어/한글 모두) 
+
+[LLM 모델 테스트 정리 문서](https://docs.google.com/document/d/1Yv2JaJCO3OmEA-WzO4s8CPJEp5NpK2eQoaiPQ9AAFpA/edit?usp=sharing)
+
+## Frontend
+→ UI 기획
+
+→ HTML 코딩
+## Backend 
+
+→ Flask로 구현
 ## LangChain
+
+→ 스크립트 생성 랭체인 구축
 
 ![LangChain](https://github.com/sesac-google-ai-1st/script_generator/assets/97524127/f33f8319-637b-46f5-843d-a55ebc95b8f9)
