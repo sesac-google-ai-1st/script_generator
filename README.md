@@ -60,6 +60,8 @@
 - 본업(유튜버), 마케팅(홍보), 부업(부수입) 등 다양한 목적으로 영상 제작에 대한 니즈가 있음 
 - 최근 다양한 생성형 AI 툴을 활용해서 예전보다 훨씬 간단하게 영상을 제작할 수 있음 <br>
  → but, 대부분의 서비스가 1분 미만의 숏츠 영상에 최적화 되어 있거나, 각각의 서비스별로 부족한 부분 존재
+<br>
+
 - **스크립트 작성 단계에서의 Pain Point** 😠 (by 현 유튜버)
    - 1번의 프롬프트로 원하는 분량의 스크립트 작성이 어려움
    - 스크립트 분량 늘어날수록 내용의 짜임새가 부족
@@ -128,15 +130,66 @@
 - 테스트 대상 모델
   -  gemini pro
   -  bard(palm2)
-  -  gpt-3.5-turbo-1106
+  -  gpt-3.5-turbo-1106 (이전 모델의 경우 답변 생성 시, 여러 요청 사항을 모두 반영 못함(영어/한글 모두))
   -  gpt 4
 - 테스트 항목 
   - 영어 / 한글 프롬프트 별로 충분한 답변을, 원하는 형태로 생성해주는가
-- 테스트 결과
-  - 모든 모델들은 **영어 프롬프트** 입력 시, 다수의 요청 사항을 반영하여 답변을 줌(원하는 형태로 답변)  👍
-  - 일부 모델 **한글로 프롬프트** 입력 시, 다수의 요청사항 반영 X 👎
 
-→ gpt-3.5-turbo-1106 이전 모델의 경우 다수의 요청 사항을 모두 반영해서 답변을 주지 못함(영어/한글 모두) 
+- 테스트 결과
+  - 모든 모델들은 **영어 프롬프트** 입력 시, 여러 요청 사항을 반영하여 답변을 줌(원하는 형태로 답변)  👍
+  - 일부 모델 **한글로 프롬프트** 입력 시, 여러 요청사항 반영 X 👎
+
+-  선정한 모델
+    - gpt-3.5-turbo-1106
+    - gpt 4
+    - gemini pro
+- 최종 프롬프트
+    <details>
+      <summary>GPT 프롬프트 ( 버전 : gpt-3.5-turbo-1106 / gpt 4)</summary>
+
+      I am planning to create a YouTube video with the main and detailed topics below.
+      Write a video script
+      First, please write only the script for detailed topic number 1.
+      
+      Video main topic
+      : Interesting Behavior of Ancient Creatures: Interpretation of Unique Characteristics and Behaviors
+      
+      video details topic
+      
+      1. The struggle to live a long life
+      2. Lightening the heavy body: The flight skills of ancient creatures
+      3. From land to water: aquatic migration strategies of ancient organisms
+      4. Surprising behavior of vegetarian dinosaurs: social structure and cooperation
+      5. Scary Crowds in Fossils: Group Behavior in Ancient Creatures
+      6. Come on! Master Hunter: Hunting Strategies of Ancient Creatures
+      
+      Writing guide
+      
+      1. Don't say hello to the channel
+      2. Don’t distinguish between scenes (don’t even write scene distinction phrases)
+      3. I also distinguish between intro and body text (don’t even write the text).
+      4. Just write the script
+      5. Please write as long as possible
+    </details>
+    <details>
+      <summary>Gemini 프롬프트</summary>
+      
+      1. The difficult terminology is written as follows: \
+      - "Aseptic reproduction" => "The ability to create offspring on one's own without any other individual" \
+      2. Long and detailed description. \
+      3. According to Tone and Manner, a script for knowledge transfer is written mainly by stories. \
+      4. Focusing on stories and narratives, the contents are richly written, including historical backgrounds, events, etc. \
+      5. Channel introduction and greetings are omitted at the start, and greetings are omitted at the end. \
+      6. Exclude narrator and commentator phrases. \
+      7. Do not write " and () and - and special characters. \
+      8. Do not distinguish between scenes. \
+      9. I don't even write anything that describes the scene. \
+      10. Do not separate chapters. \
+      11. no : do not ask questions \
+      12. Write a paragraph by sub-title. \
+      13. Run a line change after each sentence.    \
+      14. Even clauses or examples are not presented as a list, but are written in a tightrope.  
+    </details>
 
 [LLM 모델 테스트 정리 문서](https://docs.google.com/document/d/1Yv2JaJCO3OmEA-WzO4s8CPJEp5NpK2eQoaiPQ9AAFpA/edit?usp=sharing)
 
