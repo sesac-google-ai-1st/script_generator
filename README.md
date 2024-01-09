@@ -76,4 +76,4 @@ Youtube 영상 제작을 위한 AI 스크립트 생성기
 
 ## LangChain
 
-![LangChain](https://github.com/sesac-google-ai-1st/script_generator/assets/97524127/688f1b1d-5dae-4d9e-8603-ae505606406f)
+![LangChain](https://github.com/sesac-google-ai-1st/script_generator/assets/97524127/f33f8319-637b-46f5-843d-a55ebc95b8f9)
