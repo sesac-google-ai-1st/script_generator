@@ -5,8 +5,7 @@
 
 # 📽️ Demo
 
-![script generator](https://github.com/sesac-google-ai-1st/script_generator/assets/97524127/3d0448cc-7b7f-4502-9d65-f42b49c32b9f)
-
+![script_gif](https://github.com/sesac-google-ai-1st/script_generator/assets/72022988/92ef73b8-5dff-48a9-aadd-8fe9edd93c7c)
 
 # 🧑‍💻 How to run
 
@@ -260,7 +259,7 @@
 ## 보완할 점
 
 1. LLM의 출력 결과가 반환되는 시간이 너무 김
-    - 서브 주제 생성 시간 : 약 10초, 최종 스크립트 생성 시간: 약 40초  - 재확인 필요
+    - 서브 주제 생성 시간 : 9초, 최종 스크립트 생성 시간: 약 45초
     - 사용자에게 빈화면을 계속 표시할 순 없으니 최소한 로딩 중 표시해야할 듯
     - 본 프로젝트에서는 chain 실행 방식을 invoke가 아닌 stream으로 바꿔서 생성되는 과정 보여주도록 개선할 예정
 
